@@ -1,0 +1,125 @@
+/* Сброс отступов и настройка фона */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comfortaa', cursive; /* Основной шрифт */
+    min-height: 100vh; /* Растягиваем на всю высоту экрана */
+    display: flex;
+    align-items: center; /* Центрируем открытку по вертикали */
+    justify-content: center; /* Центрируем по горизонтали */
+    background: #ffe6f0; /* Нежно-розовый запасной фон (если фото не загрузится) */
+    
+    /* КРАСИВЫЙ ФОН С КАРТИНКОЙ */
+    background-image: url('background.jpg'); /* ← СЮДА ПОСТАВЬ СВОЮ КАРТИНКУ */
+    background-size: cover; /* Картинка растянется на весь экран */
+    background-position: center; /* Центрируем картинку */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Фон будет красиво стоять на месте */
+}
+
+/* Полупрозрачная карточка с текстом */
+.card {
+    background: rgba(255, 255, 255, 0.75); /* Белый, полупрозрачный */
+    backdrop-filter: blur(5px); /* Модное размытие фона позади текста */
+    -webkit-backdrop-filter: blur(5px); /* Для Safari */
+    border-radius: 30px;
+    padding: 30px 25px;
+    margin: 20px;
+    max-width: 700px; /* Ширина карточки */
+    width: 90%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(255, 200, 220, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Контент внутри карточки */
+.card-content {
+    text-align: center;
+    color: #3a2a2a;
+}
+
+/* Заголовок */
+h1 {
+    font-family: 'Caveat', cursive; /* Красивый handwritten шрифт */
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #b13e5e;
+    line-height: 1.2;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.highlight {
+    font-size: 3.2rem;
+    display: inline-block;
+}
+
+/* Основной стих */
+.verse {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 400;
+    color: #330d1a;
+    background: rgba(255, 240, 245, 0.7);
+    padding: 20px;
+    border-radius: 50px 20px 50px 20px;
+}
+
+/* Простое пожелание */
+.simple-wish {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: #771f3a;
+}
+
+/* Сердечко */
+.heart {
+    font-size: 5rem;
+    line-height: 1;
+    margin: 15px 0 10px;
+    animation: heartbeat 1.5s ease-in-out infinite; /* Анимация пульса */
+}
+
+/* Подпись-дата */
+.date {
+    font-size: 1.1rem;
+    color: #5e3a44;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Анимация сердечка */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  35% { transform: scale(1.1); }
+  45% { transform: scale(1.3); }
+  55% { transform: scale(1.1); }
+  65% { transform: scale(1.2); }
+  75% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Для мобильных телефонов */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    .highlight {
+        font-size: 2.5rem;
+    }
+    .verse {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+    .simple-wish {
+        font-size: 1.1rem;
+    }
+    .card {
+        padding: 20px 15px;
+    }
+}
