@@ -4,28 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>С 14 Февраля, Подруга! 💝</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Подключаем красивый шрифт для надписей -->
+    <!-- Подключаем красивые шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    
+    <!-- ВЕСЬ CSS ТУТ, ВНУТРИ HTML -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comfortaa', cursive;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 50px 20px 50px 20px;
+            padding: 40px 30px;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3), 
+                        0 0 0 5px rgba(255, 255, 255, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .card-content {
+            text-align: center;
+            color: #2d0f1a;
+        }
+
+        h1 {
+            font-family: 'Caveat', cursive;
+            font-size: 4rem;
+            margin-bottom: 25px;
+            color: #d43f6b;
+            line-height: 1.2;
+            text-shadow: 3px 3px 0 rgba(255, 200, 220, 0.8);
+        }
+
+        .highlight {
+            font-size: 4.5rem;
+            display: inline-block;
+            color: #b62b56;
+        }
+
+        .verse {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            font-weight: 400;
+            color: #2f1a23;
+            background: rgba(255, 230, 240, 0.7);
+            padding: 25px;
+            border-radius: 60px 20px 60px 20px;
+            border: 2px dashed #ff99bb;
+        }
+
+        .simple-wish {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #aa2e55;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 15px;
+            border-radius: 40px;
+        }
+
+        .heart {
+            font-size: 7rem;
+            line-height: 1;
+            margin: 20px 0 15px;
+            animation: pulse 1.5s ease infinite;
+            filter: drop-shadow(0 10px 15px rgba(255, 0, 100, 0.5));
+        }
+
+        .date {
+            font-size: 1.3rem;
+            color: #6b3f4d;
+            margin-top: 25px;
+            font-style: italic;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Анимация сердечка */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            35% { transform: scale(1.1); }
+            45% { transform: scale(1.3); }
+            55% { transform: scale(1.1); }
+            65% { transform: scale(1.2); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Для мобильных */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            .highlight {
+                font-size: 3.2rem;
+            }
+            .verse {
+                font-size: 1.2rem;
+                padding: 20px;
+            }
+            .simple-wish {
+                font-size: 1.3rem;
+            }
+            .heart {
+                font-size: 5rem;
+            }
+            .card {
+                padding: 25px 15px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="card">
-        <!-- Полупрозрачная подложка для текста, чтобы было легко читать -->
         <div class="card-content">
             <h1>С Днём всех влюблённых, <br> <span class="highlight">моя дорогая!</span></h1>
+            
             <p class="verse">
                 Пусть этот день подарит море нежности, <br>
                 улыбок, тепла и маленьких чудес. <br>
                 Ты — удивительный человек, и я безумно рада, <br>
                 что ты есть в моей жизни!
             </p>
+            
             <p class="simple-wish">
                 Оставайся такой же яркой, искренней и счастливой. <br>
                 Люблю тебя! ❤️
             </p>
+            
             <div class="heart">❤️</div>
+            
             <p class="date">14 февраля 2026</p>
         </div>
     </div>
